@@ -10,7 +10,6 @@ class User < ApplicationRecord
          has_many :likedphotos, :through => :albums, :source => :photos
 has_many :followings, :through => :sent_friend_requests, :source => :recipient
 has_many :followers, :through => :received_friend_requests, :source => :sender
-validates :username, :presence => true
-validates :username, :uniqueness => true
+
 
 end

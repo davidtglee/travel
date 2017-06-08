@@ -42,10 +42,7 @@
         <ul class="nav navbar-nav">
 
           <li><a href="/photos">Photos</a></li>
-
-        </ul>
-
-        <% if current_user!= nil %>
+          <% if current_user!= nil %>
           <li><a href="/users/<%= current_user.id %>">My Wall</a></li>
           <li><a href="/albums/<%= current_user.id %>">My Albums</a></li>
           <li><a href="/likes/<%= current_user.id %>">My Likes</a></li>
@@ -61,7 +58,7 @@
                 <!-- else show edit and sign out link -->
                 <%else %>
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="/users/edit"> <i class="fa fa-fw fa-edit"></i> <%= current_user.username %> </a></li>
+                  <li><a href="/users/edit"> <i class="fa fa-fw fa-edit"></i> <%= current_user.email %> </a></li>
                   <li><a href="/users/sign_out" data-method="delete" rel="nofollow"><i class="fa fa-fw fa-sign-out"></i>Sign Out</a></li>
                 </ul>
         <% end %>
